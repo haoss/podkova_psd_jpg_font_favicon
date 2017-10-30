@@ -79,6 +79,8 @@ $(document).on('ready', function(){
     midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
   });
 
+  imgThumbnails();
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();
@@ -161,4 +163,13 @@ function simpleForm(form, callback) {
 
     return false;
   });
+}
+
+function imgThumbnails(){
+  var img = $('.img-thumbnails');
+  if (img.length < 0) return;
+
+  img.each(function(){
+    $('<span class="img-thumbnails__title">' + $(this).attr('title') + '</span>').insertAfter($(this))
+  })
 }

@@ -1,8 +1,52 @@
 /* modules */
 
-/* gallery */
-.gallery
-  &__item
-    padding: 5px
-    background: $color-white
-    box-shadow: 0 0 5px rgba($color-black,0.5)
+.sidebar
+  position: relative
+  overflow: hidden
+  border-radius: 3px
+  margin: 0 auto 25px
+  max-width: 357px
+  padding: 23px 25px 25px 25px
+  background: $color-lightgray
+  font-family: $font-roboto-light
+  font-size: rem(13)
+  &__title
+    color: $color-orange
+    text-transform: uppercase
+    font-size: rem(18)
+    font-family: $font-roboto-medium
+    line-height: 1
+    margin-bottom: 15px
+  &__navigation
+    ul
+      margin: 0
+      padding: 0
+      li
+        list-style: none
+        margin: 0 0 6px 0
+        &:last-child
+          margin-bottom: 0
+        &>a
+          display: block
+          position: relative
+          text-decoration: none
+          color: $color-dark
+          padding: 0 35px 0 15px
+          &:hover
+            color: $color-orange
+          &::before
+            content: "\f363"
+            font-family: $font-ionicons
+            position: absolute
+            left: 1px
+            top: 0px
+            font-size: rem(18)
+            color: #d1d4da
+            line-height: 1
+          span
+            position: absolute
+            right: 0
+            top: 3px
+            color: $color-gray
+            display: block
+            line-height: 1

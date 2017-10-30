@@ -19,6 +19,21 @@
 @media only screen and (max-width : 991px)
   /**/
 
+@media (min-width: 767px) and (max-width: 991px)
+  .sidebar
+    padding-left: 18px
+    padding-right: 18px
+    &__navigation
+      ul
+        li
+          &>a
+            padding-right: 0
+            span
+              display: none
+  .img
+    &-thumbnails
+      border-width: 7px
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
 
@@ -27,9 +42,14 @@
     transform: none !important
     animation: none !important
 
+  .img
+    &-thumbnails
+      border-width: 5px
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
-  /**/
+  .visible-xxs
+    display: block !important
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)
