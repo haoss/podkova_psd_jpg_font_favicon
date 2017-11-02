@@ -1,3 +1,101 @@
 /* header */
 .header
-  background-color: $color-gray
+  background-color: $color-white
+  // overflow: hidden
+  height: 70px
+  position: relative
+  box-shadow: 0 0 10px rgba($color-black,.35)
+  +clearfix
+  &__btn
+    position: absolute
+    right: 0
+    display: none
+    background: none
+    border: 0
+    color: $color-white
+    font-size: rem(13)
+    text-transform: uppercase
+    font-family: $font-roboto-bold
+    padding: 0
+    margin-top: 6px
+    i
+      font-size: rem(16)
+      margin-right: 5px
+      vertical-align: -1px
+  &__logo
+    float: left
+    margin-top: 6px
+    img
+      max-width: 100%
+      height: auto
+      display: block
+  &__quote
+    font-size: rem(13)
+    font-family: $font-roboto-medium
+    font-style: italic
+    margin-left: 263px
+    margin-top: 17px
+    padding: 1px 0 1px 18px
+    position: relative
+    width: 190px
+    span
+      position: relative
+      z-index: 1
+    &::before, &::after
+      content: ''
+      position: absolute
+      width: 28px
+      height: 18px
+    &::before
+      left: 0
+      top: 0
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAASCAYAAABFGc6jAAAB3UlEQVQ4jZXVTYhOYRQH8N97m0nZXeW6ImNKYYGNha/s1ET5mlJqFJKyISkbCRuRj5UlscBKMjOyUWwII0WyUtKI9513Ma+PqWHEWNx36ul678x9/6vznHP+53/u85zOrVRHRjUxB0exHQsxhie4jJcKkCaxWr2xDkewAbMxjAFcSpP4K1SaQqtxH/MK6p3A2YLYaZwqiFWxOU3i15XqyGiCt0iKum5iD27mfPtxbQZeFSsiHC8hAhfQEZxn4VwJ3nwci9BbIhlSrA3O6zG3JLc3QlfJZLncJW3wuiP8aoMQB/aPNnidEZ61QfgW2C/a4P2NcKUNwnBgf8CDkryPEe7iRonkP3iV8x1CrQT3edQ0DuAMfk6T/Mj/7zKMNXg8g1B/JVhBZGuoRzZdB7E4iO3AvXyFNMnmo1ZvrJKN/FIcDlK+aE5diFHcRmdO5Cn6p2s5TeI3uCPbdyFOpkk80ZFzLsNFbAl8Y9iHySKRWr0RYTfOY0EQGsR1spXSh0XYhI0Iv3IcO/G+Rf0u9NTqjeXYiu5cfAh9aRJPkm3vok6r2CX7VbTC3qluW2CwKfJ9ypF/I/iNq1g5jUgRPsmueVsoQnZ1fzGCd3iIW/hcsvB4s/iQbFgG0iSeaJX4D6sccH2deg4CAAAAAElFTkSuQmCC') 0 0 no-repeat
+    &::after
+      right: 0
+      bottom: 0
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAASCAYAAABFGc6jAAAB10lEQVQ4jZXVTYhOYRQH8N97fZcZXum6kknKysJCvjIbahaIKcmCBbay8hFlMZlZiJKsbITFlKgplA2LKflazZaFYkRz58q8O9Egi3vV43rf677/1TnnOf/zf85zz32extT0jA6Yj30YxGasxnHcDpOSuPkPMc1aq3AYA1iPFXPbCDRwBMNF8dpIs9ZyXCz488K1slAvRrG3G4FCpB/3sLLdeijUiyfyYwrxDg/xGuMdRAbwAIuC8C88LWp+aBTfqFEkhp18wlncKUidsA4TWBzEHuF0EjfflDs6VhKZwC5kFQJ/NnirJDKUxM3hcmIkn66RUvwZDmDDf4QGsT3w32M2zVqH0qy17K8dTU3PHMTdimLj8o4n26w9lo9wO3zDJYwkcfNnVOyqCjvwCn2leA92VvAWYgg3yI9u63+EIMH1Umwj5tTgHk2z1v4Ia2okw26sDfxyh1U4Ecm7qostgb2kC962CLNdEHoCu9UFb0Ek//Pr4m1gt5vCTpiMMFYz+TOeB/5LpDW5YxGuYKpG8jl8D/wfOFODl+FyhC/yiaoSu4CbbeKjOF/Bm8aeJG5mjeDhW4pT8seuD1/lV9E1vOhUKYmb0qy1CSfRL7/3PuI+riZxcwZ+Ay0FbiCW4nvWAAAAAElFTkSuQmCC') 0 0 no-repeat
+  &__nav
+    float: right
+    width: 580px
+    position: relative
+    height: 70px
+    &-background
+      height: 70px
+      position: absolute
+      left: 0
+      top: 0
+      width: 1920px
+      background: linear-gradient(to bottom, #ee560e 35px, #c04631 35px)
+      &::before, &::after
+        position: absolute
+        left: 0
+        top: 0
+        content: ''
+        border-right: 28px solid transparent
+        border-top: 35px solid $color-white
+      &::after
+        top: inherit
+        bottom: 0
+        border-top: 0
+        border-bottom: 35px solid $color-white
+    &-top
+      position: relative
+      z-index: 5
+      text-align: right
+      color: #fdd2bd
+      font-size: rem(11)
+      height: 35px
+      line-height: 33px
+      &>div
+        display: inline-block
+        &+div
+          margin-left: 25px
+        strong
+          font-size: rem(13)
+          color: $color-white
+        .icon
+          margin-right: 10px
+          vertical-align: -4px
+    &-bottom
+      position: relative
+      z-index: 5

@@ -13,11 +13,75 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px)
-  /**/
+  .header
+    &__nav
+      width: 500px
+      &-top > div + div
+        margin-left: 15px
+    &__quote
+      margin-left: 235px
+  .navigation ul li
+    padding-left: 20px
+    margin-left: 12px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
-  /**/
+  .header
+    &__nav
+      width: 280px
+    &__btn
+      display: block
+  .navigation
+    position: absolute
+    overflow: hidden
+    margin-top: 35px
+    right: 0
+    padding-top: 9px
+    opacity: 0
+    visibility: hidden
+    transform: translateY(10px)
+    transition: transform 0.35s, opacity 0.35s
+    &.is-active
+      opacity: 1
+      visibility: visible
+      transform: translateY(0px)
+    &::after
+      content: ''
+      height: 0
+      width: 0
+      border-left: 9px solid transparent
+      border-right: 9px solid transparent
+      border-bottom: 9px solid #c04631
+      position: absolute
+      top: 0
+      right: 86px
+    ul
+      width: 290px
+      border-radius: 4px
+      background: #c04631
+      overflow: hidden
+      li
+        margin: 0
+        padding: 0
+        &::before
+          display: none
+        display: block
+        &>a, &>span
+          height: 46px
+          line-height: 46px
+          padding: 0 28px
+          text-align: left
+          &::before, &::after
+            display: none
+          border: 0
+        &>a
+          &:hover, &:focus
+            background: $color-orange
+            color: $color-white
+        &.active
+          &>a,&>span
+            background: $color-orange
+            color: $color-white
 
 @media (min-width: 767px) and (max-width: 991px)
   .sidebar
@@ -41,15 +105,71 @@
     transition-property: none !important
     transform: none !important
     animation: none !important
-
   .img
     &-thumbnails
       border-width: 5px
+  .footer
+    &__social
+      width: 190px
+      margin-left: auto
+      margin-right: auto
+    &__title
+      text-align: center
+    &__copyright
+      text-align: center
+      max-width: inherit
+      color: #999999
+      margin-top: 5px
+    .container .row > div
+      padding-top: 55px
+      padding-bottom: 45px
+  .header
+    height: 105px
+    &__nav
+      height: 35px
+      position: absolute
+      left: 0
+      right: 0
+      top: 70px
+      width: auto
+      text-align: center
+      &-background
+        display: none
+      &-bottom
+        background: #c04631
+        height: 35px
+      &-top
+        display: none
+    &__btn
+      right: 50%
+      transform: translateX(50%)
+    &__quote
+      float: right
+      margin-left: 0
+    &__logo
+      width: 170px
+      margin-top: 10px
+  .navigation
+    right: 50%
+    transform: translateX(50%) translateY(10px)
+    &.is-active
+      transform: translateX(50%) translateY(0px)
+    &::after
+      right: 50%
+      transform: translateX(5px)
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
   .visible-xxs
     display: block !important
+  .header
+    &__logo
+      width: 117px
+      margin-top: 19px
+    &__quote
+      width: 155px
+      font-size: rem(11)
+      margin-top: 19px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

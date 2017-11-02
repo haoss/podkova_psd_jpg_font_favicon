@@ -2,14 +2,38 @@
 header.header
   .container
     
-    -var navigation = { 'Главная': '#', 'О нас': '#', 'Продукция': '#', 'Сотрудничество': '#', 'Наши магазины': '#', 'Контакты': '#'};
+    .header__logo
+      a(href="#!")
+        img(src="./img/header-logo.png", alt="")
     
-    nav.navigation(role="navigation")
-      ul
-        each val, key in navigation
-          if active === key
-            li.active
-              a(href=val, title=key)= key
-          else
-            li
-              a(href=val, title=key)= key
+    .header__nav
+      .header__nav-background
+      .header__nav-top
+        div.hidden-sm.hidden-xs
+          i.icon.icon--header-phone1
+          | Пн-Пт 9:00 - 18:00, Сб-Вс 10:00 - 16:00
+        div
+          i.icon.icon--header-phone2
+          strong +7 986 54-32-10,  +7 986 54-32-10
+      .header__nav-bottom
+        
+        button#headerBtn.header__btn(type="button")
+          i.ion-navicon-round
+          span Меню сайта
+    
+        -var navigation = { 'Главная': '#', 'О компании': '#', 'Услуги': '#', 'Новости': '#', 'Контакты': '#'};
+        
+        nav#headerNav.navigation(role="navigation")
+          ul
+            each val, key in navigation
+              if active === key
+                li.active
+                  a(href=val, title=key)= key
+              else
+                li
+                  a(href=val, title=key)= key
+
+    .header__quote
+      span НАША РЕПУТАЦИЯ 
+        br
+        | ПРОВЕРЕНА ВРЕМЕНЕМ
