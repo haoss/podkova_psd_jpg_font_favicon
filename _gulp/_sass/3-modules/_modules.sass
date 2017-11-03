@@ -34,6 +34,8 @@
           padding: 0 35px 0 15px
           &:hover
             color: $color-orange
+            &::before
+              color: $color-orange
           &::before
             content: "\f363"
             font-family: $font-ionicons
@@ -50,6 +52,22 @@
             color: $color-gray
             display: block
             line-height: 1
+        &.active
+          &>a
+            color: $color-orange
+            &::before
+              color: $color-orange
+          font-family: $font-roboto-medium
+    &--services
+      margin-bottom: 25px
+      &:last-child
+        margin-bottom: 0
+      ul
+        li
+          &>a
+            padding-right: 0
+            span
+              display: none
 
 .breadcrumbs
   background: #e2a06c url('../img/breadcrumbs-background.png') top center no-repeat
@@ -149,6 +167,7 @@
         border-radius: 50%
         color: $primary-color
         background: #f7f8fa
+      &>a
         &:hover
           text-decoration: none
           background: $color-orange
@@ -159,3 +178,39 @@
         &>a,&>span
           background: $color-orange
           color: $color-white
+
+.about
+  &__img
+    float: right
+    margin-left: 30px
+    margin-bottom: 30px
+
+.advantages
+  &__table
+    margin-bottom: 25px
+    td
+      vertical-align: top
+      &+td
+        padding-left: 30px
+      &:first-child
+        width: 1px
+
+ul.list
+  padding: 0
+  margin: 0 0 25px 0
+  li
+    list-style: none
+    position: relative
+    padding-left: 23px
+    min-height: 15px
+    margin: 0 0 5px 0
+    line-height: 1.2
+    &::before
+      content: ''
+      position: absolute
+      left: 1px
+      top: 3px
+      width: 0
+      width: 12px
+      height: 13px
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAANCAYAAACdKY9CAAABKklEQVQokY3SsUtWcRTG8c+9RBTke/khgiGIiAgtueiWDhIhhk72Xhyc/AuEWhuadHNya5PqNzWJYG625SpETo4ivdffUCYk1+G9gkMv9l3P85zzcM7J6roGVVk8xBpWMI4M37GNzRDTb8jqulaVxQC+oMAwTvAXQ0g4w/MQ01nWabcy7GMVB/iBV7jCB8zr8hUzORYwi3Os40WIqRNiSljERmN4hqWs0259agr9IaYL/6Aqi2W8x26OGbztJYYQ00e8w3SOxxityuJeL0NVFg/wBAM5/uAlHvUyYLDRnOf4qbvKu+jHZY69/xDfsJd12q1JfMMcTvErxHTcZB9roo7gM6ZuLr2DKdzHSYhpojEc4mnT6CjENJc3o17r/s42pm9FmMUW+vAGrgF5hFhIzHQWYQAAAABJRU5ErkJggg==') 0 0 no-repeat

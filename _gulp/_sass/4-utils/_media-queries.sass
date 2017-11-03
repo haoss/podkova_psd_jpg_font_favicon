@@ -82,6 +82,9 @@
           &>a,&>span
             background: $color-orange
             color: $color-white
+  .about
+    &__img
+      width: 280px
 
 @media (min-width: 767px) and (max-width: 991px)
   .sidebar
@@ -157,6 +160,12 @@
     &::after
       right: 50%
       transform: translateX(5px)
+  .about
+    &__img
+      display: none
+  .content
+    &__head
+      font-size: rem(24)
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -170,6 +179,13 @@
       width: 155px
       font-size: rem(11)
       margin-top: 19px
+  .advantages
+    &__table
+      td
+        img
+          width: 25px
+        &+td
+          padding-left: 15px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

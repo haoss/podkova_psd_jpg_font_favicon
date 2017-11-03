@@ -3645,25 +3645,26 @@ body {
   font-weight: 400;
   text-decoration: none;
   margin: 0 0 15px 0;
-  font-family: "RobotoRegular"; }
+  font-family: "RobotoBold"; }
 
 .h1, h1 {
   font-size: 2.5rem;
   line-height: 1.05;
   letter-spacing: -1px;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  font-family: "RobotoRegular"; }
 
 .h2, h2 {
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   line-height: 1.14;
   margin-bottom: 20px; }
 
 .h3, h3 {
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.38; }
 
 .h4, h4 {
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   line-height: 1.38; }
 
 .h5, h5 {
@@ -3823,6 +3824,25 @@ a.link:hover, a.link:focus, a.link:active {
 
 .content {
   padding: 50px 0; }
+  .content--text {
+    font-size: 0.9375rem; }
+  .content__head {
+    text-transform: uppercase;
+    color: #ee560e;
+    font-family: "RobotoMedium";
+    font-size: 1.625rem;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    padding-left: 12px;
+    position: relative; }
+    .content__head::before {
+      top: 6px;
+      height: 19px;
+      width: 3px;
+      background: #e6e8ea;
+      position: absolute;
+      left: 0;
+      content: ''; }
 
 .visible-xxs {
   display: none !important; }
@@ -4281,6 +4301,8 @@ label {
         padding: 0 35px 0 15px; }
         .sidebar__navigation ul li > a:hover {
           color: #ee560e; }
+          .sidebar__navigation ul li > a:hover::before {
+            color: #ee560e; }
         .sidebar__navigation ul li > a::before {
           content: "\f363";
           font-family: "Ionicons";
@@ -4297,6 +4319,20 @@ label {
           color: #979797;
           display: block;
           line-height: 1; }
+      .sidebar__navigation ul li.active {
+        font-family: "RobotoMedium"; }
+        .sidebar__navigation ul li.active > a {
+          color: #ee560e; }
+          .sidebar__navigation ul li.active > a::before {
+            color: #ee560e; }
+  .sidebar__navigation--services {
+    margin-bottom: 25px; }
+    .sidebar__navigation--services:last-child {
+      margin-bottom: 0; }
+    .sidebar__navigation--services ul li > a {
+      padding-right: 0; }
+      .sidebar__navigation--services ul li > a span {
+        display: none; }
 
 .breadcrumbs {
   background: #e2a06c url("../img/breadcrumbs-background.png") top center no-repeat;
@@ -4397,15 +4433,49 @@ label {
         border-radius: 50%;
         color: #444444;
         background: #f7f8fa; }
-        .pagination ul li > a:hover, .pagination ul li > span:hover {
-          text-decoration: none;
-          background: #ee560e;
-          color: #ffffff; }
+      .pagination ul li > a:hover {
+        text-decoration: none;
+        background: #ee560e;
+        color: #ffffff; }
       .pagination ul li + li {
         margin-left: 7px; }
       .pagination ul li.active > a, .pagination ul li.active > span {
         background: #ee560e;
         color: #ffffff; }
+
+.about__img {
+  float: right;
+  margin-left: 30px;
+  margin-bottom: 30px; }
+
+.advantages__table {
+  margin-bottom: 25px; }
+  .advantages__table td {
+    vertical-align: top; }
+    .advantages__table td + td {
+      padding-left: 30px; }
+    .advantages__table td:first-child {
+      width: 1px; }
+
+ul.list {
+  padding: 0;
+  margin: 0 0 25px 0; }
+  ul.list li {
+    list-style: none;
+    position: relative;
+    padding-left: 23px;
+    min-height: 15px;
+    margin: 0 0 5px 0;
+    line-height: 1.2; }
+    ul.list li::before {
+      content: '';
+      position: absolute;
+      left: 1px;
+      top: 3px;
+      width: 0;
+      width: 12px;
+      height: 13px;
+      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAANCAYAAACdKY9CAAABKklEQVQokY3SsUtWcRTG8c+9RBTke/khgiGIiAgtueiWDhIhhk72Xhyc/AuEWhuadHNya5PqNzWJYG625SpETo4ivdffUCYk1+G9gkMv9l3P85zzcM7J6roGVVk8xBpWMI4M37GNzRDTb8jqulaVxQC+oMAwTvAXQ0g4w/MQ01nWabcy7GMVB/iBV7jCB8zr8hUzORYwi3Os40WIqRNiSljERmN4hqWs0259agr9IaYL/6Aqi2W8x26OGbztJYYQ00e8w3SOxxityuJeL0NVFg/wBAM5/uAlHvUyYLDRnOf4qbvKu+jHZY69/xDfsJd12q1JfMMcTvErxHTcZB9roo7gM6ZuLr2DKdzHSYhpojEc4mnT6CjENJc3o17r/s42pm9FmMUW+vAGrgF5hFhIzHQWYQAAAABJRU5ErkJggg==") 0 0 no-repeat; }
 
 /* clear */
 .clear, .clear1, .clear2, .clear3, .clear4, .clear5, .clear6, .clear7, .clear8, .clear9, .clear10, .clear11, .clear12, .clear13, .clear14, .clear15, .clear16, .clear17, .clear18, .clear19, .clear20, .clear21, .clear22, .clear23, .clear24, .clear25, .clear26, .clear27, .clear28, .clear29, .clear30, .clear31, .clear32, .clear33, .clear34, .clear35, .clear36, .clear37, .clear38, .clear39, .clear40, .clear41, .clear42, .clear43, .clear44, .clear45, .clear46, .clear47, .clear48, .clear49, .clear50, .clear51, .clear52, .clear53, .clear54, .clear55, .clear56, .clear57, .clear58, .clear59, .clear60, .clear61, .clear62, .clear63, .clear64, .clear65, .clear66, .clear67, .clear68, .clear69, .clear70, .clear71, .clear72, .clear73, .clear74, .clear75, .clear76, .clear77, .clear78, .clear79, .clear80, .clear81, .clear82, .clear83, .clear84, .clear85, .clear86, .clear87, .clear88, .clear89, .clear90, .clear91, .clear92, .clear93, .clear94, .clear95, .clear96, .clear97, .clear98, .clear99, .clear100, .clear-hr {
@@ -4810,7 +4880,9 @@ label {
           color: #ffffff; }
         .navigation ul li.active > a, .navigation ul li.active > span {
           background: #ee560e;
-          color: #ffffff; } }
+          color: #ffffff; }
+  .about__img {
+    width: 280px; } }
 
 @media (min-width: 767px) and (max-width: 991px) {
   .sidebar {
@@ -4885,7 +4957,11 @@ label {
     .navigation::after {
       right: 50%;
       -webkit-transform: translateX(5px);
-              transform: translateX(5px); } }
+              transform: translateX(5px); }
+  .about__img {
+    display: none; }
+  .content__head {
+    font-size: 1.5rem; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 479px) {
@@ -4897,7 +4973,11 @@ label {
   .header__quote {
     width: 155px;
     font-size: 0.6875rem;
-    margin-top: 19px; } }
+    margin-top: 19px; }
+  .advantages__table td img {
+    width: 25px; }
+  .advantages__table td + td {
+    padding-left: 15px; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 319px) {

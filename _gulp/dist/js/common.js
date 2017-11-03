@@ -177,6 +177,7 @@ function simpleForm(form, callback) {
 function imgThumbnails(){
   var img = $('.img-thumbnails');
   if (img.length < 0) return;
+  if (img.attr('title') == undefined) return;
 
   img.each(function(){
     $('<span class="img-thumbnails__title">' + $(this).attr('title') + '</span>').insertAfter($(this))
