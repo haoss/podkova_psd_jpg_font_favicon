@@ -1,0 +1,309 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Контакты' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Контакты' + ' - Подкова' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    .wrapper
+    
+      include ./_include/_header
+      
+      // Breadcrumbs
+      .breadcrumbs
+        .container
+          
+          ul
+            li
+              a(href="#!") Главная
+            li
+              a(href="#!") Контакты
+            li
+              h1 Контакты
+      
+      // Content
+      .content.content--text
+        .container
+          
+          // Map
+          #map.contact__map
+            
+          // Google Map
+          script(src='./js/libs/google-map.js?sensor=false')
+          script.
+            function initialize() {
+            var myLatlng = new google.maps.LatLng(48.4892244,135.083824);
+            var map_options = {
+              zoom: 16,
+              mapTypeId: google.maps.MapTypeId.ROADMAP,
+              center: myLatlng,
+              scrollwheel: false,
+              disableDefaultUI: true
+            }
+            var map = new google.maps.Map(document.getElementById('map'), map_options)
+            var myIcon = new google.maps.MarkerImage('./img/map-icon.png', null, null, null, new google.maps.Size(85,101));
+            var marker = new google.maps.Marker({
+              position: myLatlng,
+              map: map,
+              icon: myIcon
+            });
+            /* Remove if you dont want B/W Google Map */
+            /*
+            var styles = [
+            {
+            featureType: "all",
+            stylers: [
+            { saturation: -100 }
+            ]
+            }
+            ];
+            map.setOptions({styles: styles});
+            */
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+          // Google Map Ends!
+
+          .contact__content
+            .row
+              .col-md-6
+                .content__head АГЕНТСТВО НЕДВИЖИМОСТИ “ПОДКОВА”
+                
+                table.table
+                  tr
+                    td
+                      i.ion-ios-location
+                    td 680000, г. Хабаровск, ул. К-Маркса, 65, оф. 100
+                  tr
+                    td
+                      i.ion-android-mail
+                    td 
+                      a(href="#!") podkova27@mail.ru
+                
+                p Телефоны:
+                table.table
+                  tr
+                    td
+                      i.ion-android-call
+                    td
+                      a(href="callto:#!") (4212) 325-215
+                  tr
+                    td
+                      i.ion-android-call
+                    td
+                      a(href="callto:#!") (4212) 933-488
+                
+              .col-md-6
+                .contact__form
+                  .contact__form-wrapper
+                    div
+                      .h4 У вас еще нет риэлтора?
+                      p Свяжитесь с нами
+                        br
+                        span.f20 +7 (4212) 325-215
+                        br
+                        | или оставьте ваш номер, и мы перезвоним в течение 5 минут
+                    div
+                      form(action="#!")
+                        .form-group
+                          label.hidden Ваш номер
+                          input(type="text" placeholder="Ваш номер").form-control
+                        .form-group.no--m-bottom
+                          button(type="button").btn.btn--block ждем вашего звонка
+                          small.form-small Отправляя заявку вы соглашаетесь на обработку персональных 
+                            a(href="#!") данных
+              
+          .content__head Наши специалисты
+          
+          // Specialist
+          .specialists
+            .specialists-wrapper
+              .specialists__nav
+                #specialistsLeft
+                  i.ion-android-arrow-back
+                #specialistsRight
+                  i.ion-android-arrow-forward
+              .specialists__carousel
+                .specialists__block
+                  .specialists__img
+                    img(src="./img/specialist-img-1.png", alt="")
+                  .specialists__name кулаков
+                    span Александр Валерьевич
+                  .specialists__content
+                    table.table
+                      tr
+                        td
+                          i.ion-android-call
+                        td 8 (924) 313-9222
+                      tr
+                        td
+                          i.ion-android-call
+                        td +7 (4212) 93-34-88
+                      tr
+                        td
+                          i.ion-android-mail
+                        td 
+                          a(href="#!") kulakovuin@mail.ru
+                .specialists__block
+                  .specialists__img
+                    img(src="./img/specialist-img-2.png", alt="")
+                  .specialists__name Косилкин 
+                    span Станислав Николаевич
+                  .specialists__content
+                    table.table
+                      tr
+                        td
+                          i.ion-android-call
+                        td 8 (924) 313-9222
+                      tr
+                        td
+                          i.ion-android-call
+                        td +7 (4212) 93-34-88
+                      tr
+                        td
+                          i.ion-android-mail
+                        td 
+                          a(href="#!") kulakovuin@mail.ru
+                .specialists__block
+                  .specialists__img
+                    img(src="./img/specialist-img-3.png", alt="")
+                  .specialists__name графчикова
+                    span Светлана Валентиновна
+                  .specialists__content
+                    table.table
+                      tr
+                        td
+                          i.ion-android-call
+                        td 8 (924) 313-9222
+                      tr
+                        td
+                          i.ion-android-call
+                        td +7 (4212) 93-34-88
+                      tr
+                        td
+                          i.ion-android-mail
+                        td 
+                          a(href="#!") kulakovuin@mail.ru
+                .specialists__block
+                  .specialists__img
+                    img(src="./img/specialist-img-4.png", alt="")
+                  .specialists__name бондарь
+                    span Ольга Геннадьевна
+                  .specialists__content
+                    table.table
+                      tr
+                        td
+                          i.ion-android-call
+                        td 8 (924) 313-9222
+                      tr
+                        td
+                          i.ion-android-call
+                        td +7 (4212) 93-34-88
+                      tr
+                        td
+                          i.ion-android-mail
+                        td 
+                          a(href="#!") kulakovuin@mail.ru
+                    
+                .specialists__block
+                  .specialists__img
+                    img(src="./img/specialist-img-1.png", alt="")
+                  .specialists__name кулаков
+                    span Александр Валерьевич
+                  .specialists__content
+                    table.table
+                      tr
+                        td
+                          i.ion-android-call
+                        td 8 (924) 313-9222
+                      tr
+                        td
+                          i.ion-android-call
+                        td +7 (4212) 93-34-88
+                      tr
+                        td
+                          i.ion-android-mail
+                        td 
+                          a(href="#!") kulakovuin@mail.ru
+                .specialists__block
+                  .specialists__img
+                    img(src="./img/specialist-img-2.png", alt="")
+                  .specialists__name Косилкин 
+                    span Станислав Николаевич
+                  .specialists__content
+                    table.table
+                      tr
+                        td
+                          i.ion-android-call
+                        td 8 (924) 313-9222
+                      tr
+                        td
+                          i.ion-android-call
+                        td +7 (4212) 93-34-88
+                      tr
+                        td
+                          i.ion-android-mail
+                        td 
+                          a(href="#!") kulakovuin@mail.ru
+                .specialists__block
+                  .specialists__img
+                    img(src="./img/specialist-img-3.png", alt="")
+                  .specialists__name графчикова
+                    span Светлана Валентиновна
+                  .specialists__content
+                    table.table
+                      tr
+                        td
+                          i.ion-android-call
+                        td 8 (924) 313-9222
+                      tr
+                        td
+                          i.ion-android-call
+                        td +7 (4212) 93-34-88
+                      tr
+                        td
+                          i.ion-android-mail
+                        td 
+                          a(href="#!") kulakovuin@mail.ru
+                .specialists__block
+                  .specialists__img
+                    img(src="./img/specialist-img-4.png", alt="")
+                  .specialists__name бондарь
+                    span Ольга Геннадьевна
+                  .specialists__content
+                    table.table
+                      tr
+                        td
+                          i.ion-android-call
+                        td 8 (924) 313-9222
+                      tr
+                        td
+                          i.ion-android-call
+                        td +7 (4212) 93-34-88
+                      tr
+                        td
+                          i.ion-android-mail
+                        td 
+                          a(href="#!") kulakovuin@mail.ru
+                  
+          
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom

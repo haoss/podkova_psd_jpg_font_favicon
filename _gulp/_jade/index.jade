@@ -3,7 +3,7 @@ doctype
 html(lang="ru")
   
   -var active = 'Главная' //активный пункт меню, список в header.jade
-  -var pageTitle = 'Главная' + ' - siteName' //title страницы для генерации верстки  
+  -var pageTitle = 'Главная' + ' - Подкова' //title страницы для генерации верстки  
 
   include ./_include/_head
 
@@ -12,24 +12,163 @@ html(lang="ru")
     // Preloader
     include ./_include/_preloader
     
-    include ./_include/_header
+    .wrapper
     
-    // Content
-    .content
-      
-      // Section
-      section.section
-        .container
-          
-          h1 Главная 223
-          
-          .row
-            .col-md-4 4 collumns
-            .col-md-8 8 collumns
+      include ./_include/_header
 
-    
-    include ./_include/_footer
-    div(style="height: 1000px; background-color: #000")
+      // Content
+      .content
+        
+        // Main slider
+        .main-slider
+        
+        // 4 block
+        .four-blocks
+          .container
+            
+            .row
+              .col-sm-3.col-xs-6
+                .four-blocks__block
+                  div
+                    img(src="./img/four-blocks-1.png", alt="")
+                  div
+                    span работаем 
+                      br
+                      | с 1993 года
+              .col-sm-3.col-xs-6
+                .four-blocks__block
+                  div
+                    img(src="./img/four-blocks-2.png", alt="")
+                  div
+                    span Профессиональные 
+                      br
+                      | сотрудники
+              .col-sm-3.col-xs-6
+                .four-blocks__block
+                  div
+                    img(src="./img/four-blocks-3.png", alt="")
+                  div
+                    span Юридическая 
+                      br
+                      | поддержка
+              .col-sm-3.col-xs-6
+                .four-blocks__block
+                  div
+                    img(src="./img/four-blocks-4.png", alt="")
+                  div
+                    span банки 
+                      br
+                      | партнеры
+        
+        .clear100
+        
+        // Main about
+        .section.main-about
+          .container
+            
+            .main-about__wrapper
+              img(src="./img/main-about-img.png", alt="").main-about__img
+              p Компания "ПОДКОВА" образовалось в 1993 году. С тех пор минуло уже более два десятилетия. За это время мы пережили немало взлетов и падений вместе со всем цивилизованным рынком недвижимости Хабаровска, да и всей России. Сегодня можно с уверенностью сказать, что на протяжении этого времени мы с честью выходили из самых сложных ситуаций, негромко, но достойно двигались только вперед. Все эти годы мы не изменяли своему девизу "Репутация и профессионализм», и вот уже более два десятилетия мы честно работаем для вас! За минувшие годы наша компания стала одним из самых популярных брендов на рынке недвижимости Хабаровска.
+              p Мы совершаем любые операции с недвижимостью, связанные с покупкой, продажей и обменом квартир. Безупречная репутация сделала " ПОДКОВУ" привлекательным партнером не только для частных лиц, но и для множества — свыше 15  — банков.
+              
+              .clear10
+              a(href="#!").btn подробнее
+        
+        // Section
+        .section.services
+          .container
+            .services__wrapper
+              a(href="#!").services__block
+                span Юридическое 
+                  br 
+                  | сопровождение в судах
+              a(href="#!").services__block
+                span Выкуп долей в 
+                  br
+                  | квартирах
+              a(href="#!").services__block
+                span Срочный выкуп 
+                  br
+                  | квартир
+              a(href="#!").services__block
+                span профессиональная 
+                  br
+                  | фотосессия объектов 
+              a(href="#!").services__block
+                span Организация переездов 
+                  br
+                  | после сделок
+              a(href="#!").services__block
+                span Страхование имущества 
+                  br
+                  | после сделки
+              a(href="#!").services__block
+                span Приватизация квартир и 
+                  br
+                  | земельных участков
+              a(href="#!").services__block
+                span Бесплатные юридические 
+                  br
+                  | консультации
+          
+        // News
+        .section.news-list.no--p-bottom
+          .container
+            .news-list__head последние новости
+            a(href="#!").news-list__link Все новости
+            .clear
+            .news-list__wrapper
+              .news-list__nav
+                #newslistLeft
+                  i.ion-android-arrow-back
+                #newslistRight
+                  i.ion-android-arrow-forward
+              .news-list__carousel
+                .news-list__block
+                  .news-list__block-img
+                    img(src="./img/news-list-1.png", alt="")
+                  .news-list__block-content
+                    .news-list__block-name Ипотека в октябре: самое время взять
+                    p С 25 сентября средняя ставка по ипотеке составляет 9% годовых и это отлично. Отвечаем на самые главные вопросы и рассказываем, как воспользоваться историческим минимумом процентных ставок.
+                    a(href="#!").btn подробнее
+                .news-list__block
+                  .news-list__block-img
+                    img(src="./img/news-list-2.png", alt="")
+                  .news-list__block-content
+                    .news-list__block-name 5 шагов к успешной покупке квартиры в новостройке
+                    p Покупка квартиры, как игра в шахматы. Важно заранее просчитать стратегию  и определить для себя "ходы", которые приведут к успеху. Строительство не прекращает развиваться. Спрос населения на жилье растет.
+                    a(href="#!").btn подробнее
+                .news-list__block
+                  .news-list__block-img
+                    img(src="./img/news-list-1.png", alt="")
+                  .news-list__block-content
+                    .news-list__block-name Ипотека в октябре: самое время взять
+                    p С 25 сентября средняя ставка по ипотеке составляет 9% годовых и это отлично. Отвечаем на самые главные вопросы и рассказываем, как воспользоваться историческим минимумом процентных ставок.
+                    a(href="#!").btn подробнее
+                .news-list__block
+                  .news-list__block-img
+                    img(src="./img/news-list-2.png", alt="")
+                  .news-list__block-content
+                    .news-list__block-name 5 шагов к успешной покупке квартиры в новостройке
+                    p Покупка квартиры, как игра в шахматы. Важно заранее просчитать стратегию  и определить для себя "ходы", которые приведут к успеху. Строительство не прекращает развиваться. Спрос населения на жилье растет.
+                    a(href="#!").btn подробнее
+                .news-list__block
+                  .news-list__block-img
+                    img(src="./img/news-list-1.png", alt="")
+                  .news-list__block-content
+                    .news-list__block-name Ипотека в октябре: самое время взять
+                    p С 25 сентября средняя ставка по ипотеке составляет 9% годовых и это отлично. Отвечаем на самые главные вопросы и рассказываем, как воспользоваться историческим минимумом процентных ставок.
+                    a(href="#!").btn подробнее
+                .news-list__block
+                  .news-list__block-img
+                    img(src="./img/news-list-2.png", alt="")
+                  .news-list__block-content
+                    .news-list__block-name 5 шагов к успешной покупке квартиры в новостройке
+                    p Покупка квартиры, как игра в шахматы. Важно заранее просчитать стратегию  и определить для себя "ходы", которые приведут к успеху. Строительство не прекращает развиваться. Спрос населения на жилье растет.
+                    a(href="#!").btn подробнее
+                
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
     
     //[if gte IE 9]
       <script src='./js/libs/html5shiv/es5-shim.min.js'>

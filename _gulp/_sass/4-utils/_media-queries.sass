@@ -23,6 +23,30 @@
   .navigation ul li
     padding-left: 20px
     margin-left: 12px
+  .contact
+    &__form
+      padding-left: 20px
+      padding-right: 15px
+    &__content
+      padding-top: 60px
+      .content__head
+        white-space: nowrap
+        margin-top: -55px
+  .services
+    &__block
+      width: 235px
+  .news-list
+    &__block
+      height: 248px
+      // width: 470px
+      p
+        overflow: hidden
+        height: 40px
+  .four-blocks__block
+    & > div + div
+      padding-left: 15px
+    img
+      width: 50px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -85,6 +109,40 @@
   .about
     &__img
       width: 280px
+  .contact
+    &__content
+      padding-top: 0
+      .content__head
+        margin-top: 0
+        white-space: normal
+    &__form
+      margin-top: 25px
+      max-width: 470px
+  .services
+    padding: 80px 0
+  .navigation > ul ul
+    display: none
+  .main-about
+    &__img
+      display: none
+    &__wrapper
+      padding-right: 0
+  .news-list
+    &__wrapper
+      margin: 0
+  .four-blocks
+    &__block
+      display: block
+      text-align: center
+      &>div
+        display: block
+        &+div
+          padding-left: 0
+          padding-top: 10px
+        &:first-child
+          width: 100%
+      img
+        margin: 0 auto
 
 @media (min-width: 767px) and (max-width: 991px)
   .sidebar
@@ -166,11 +224,30 @@
   .content
     &__head
       font-size: rem(24)
+  .reviews
+    &__row
+      .col-sm-2
+        width: 126px
+      .col-md-10
+        width: calc(100% - 126px)
+  .services
+    &__wrapper
+      margin-right: 0
+    &__block
+      width: 224px
+  .four-blocks
+    .row
+      &>div
+        &:nth-child(1), &:nth-child(2)
+          .four-blocks__block
+            margin-bottom: 35px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
   .visible-xxs
     display: block !important
+  .hidden-xxs
+    display: none !important
   .header
     &__logo
       width: 117px
@@ -186,6 +263,55 @@
           width: 25px
         &+td
           padding-left: 15px
+  .reviews
+    &__img
+      float: left
+      width: 54px
+      &+.reviews__title
+        padding-left: 77px
+    &__row
+      .col-xs-10
+        width: 100%
+    &__name
+      span
+        display: block
+  .contact
+    &__form-wrapper
+      display: block
+      &>div
+        display: block
+        &:first-child
+          width: 100%
+        &+div
+          padding-top: 25px
+          padding-left: 0
+  .specialists
+    margin-top: 0
+    &__nav
+      right: inherit
+      left: 0
+    &__block
+      border-right: 0
+  .news-list
+    &__block
+      height: auto
+      &-img
+        display: none
+      &-content
+        width: 100%
+        margin-left: 0
+        padding: 45px 15px
+      p
+        height: auto
+    &__head
+      padding-left: 0
+      opacity: 0
+      z-index: -1
+    &__nav
+      padding-left: 0
+  .four-blocks
+    &__block
+      font-size: rem(12)
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

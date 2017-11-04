@@ -82,6 +82,55 @@ $(document).on('ready', function(){
   imgThumbnails();
   mobileMenu();
 
+  var owl = $('.specialists__carousel');
+  owl.owlCarousel({
+    items: 4,
+    loop: true,
+    nav: false,
+    dots: false,
+    responsive: {
+      320: {
+        items: 1
+      },
+      480: {
+        items: 2
+      },
+      767: {
+        items: 4
+      }
+    }
+  });
+  $('#specialistsLeft').click(function(){
+      owl.trigger('prev.owl.carousel');
+
+  })
+  $('#specialistsRight').click(function(){
+      owl.trigger('next.owl.carousel');
+  });
+
+  var owl2 = $('.news-list__carousel');
+  owl2.owlCarousel({
+    items: 2,
+    loop: true,
+    nav: false,
+    dots: false,
+    responsive: {
+      320: {
+        items: 1
+      },
+      991: {
+        items: 2,
+        margin: 30
+      }
+    }
+  });
+  $('#newslistLeft').click(function(){
+      owl2.trigger('prev.owl.carousel');
+  })
+  $('#newslistRight').click(function(){
+      owl2.trigger('next.owl.carousel');
+  });
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();

@@ -1,0 +1,89 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Отзывы' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Отзывы' + ' - Подкова' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    .wrapper
+    
+      include ./_include/_header
+      
+      // Breadcrumbs
+      .breadcrumbs
+        .container
+          
+          ul
+            li
+              a(href="#!") Главная
+            li
+              a(href="#!") Отзывы
+            li
+              h1 Отзывы
+      
+      // Content
+      .content.content--text
+        .container
+          
+          // Reviews
+          .reviews
+            .reviews__row.row
+              .col-xs-2.hidden-xxs
+                img(src="./img/reviews-img-1.png", alt="").reviews__img
+              .col-xs-10
+                img(src="./img/reviews-img-1.png", alt="").reviews__img.visible-xxs
+                .reviews__title Купили квартиру по привлекательной цене!
+                .clear
+                .reviews__content
+                  p Приобретала квартиру через агентство недвижимости "Подкова". Результат превзошел все мои ожидания, подобрали отличную квартиру по очень привлекательной цене. Особую благодарность выражаю начальнику отдела продаж Константину, который сопровождал нашу сделку, за качественную работу, внимание и профессионализм. Всем рекомендую данное агентство, желаемый результат гарантирован. 
+                .reviews__name С уважением, Светлана Савельева 
+                  span /30 января 2016/
+                  
+            .reviews__row.row
+              .col-xs-2.hidden-xxs
+                img(src="./img/reviews-img-2.png", alt="").reviews__img
+              .col-xs-10
+                img(src="./img/reviews-img-2.png", alt="").reviews__img.visible-xxs
+                .reviews__title Продали квартиру за 28 дней и переехали в город Мечты! Здравствуй, Питер!
+                .clear
+                .reviews__content
+                  p Продавала квартиру, мучилась более полугода. Обратилась в агентство Победа, убедили на подписание договора и работу с их агентом Оксаной. Была проведена серьезная подготовка к продаже, получала постоянные отчеты о проделанной работе. На сделку вышли через 28 дней после обращения в данное агентство. Довольна всем! Рекомендую своим друзьям и знакомым! 
+                  p P.S. Цель продажи была переезд в Санкт Петербург. Через специалистов Подковы рассмотрела ипотеку в ВТБ24 и подобрала квартиру в Питере. Очень рада! Спасибо за проделанную работу!
+                .reviews__name С уважением, Светлана Савельева 
+                  span /30 января 2016/
+                  
+            .reviews__row.row
+              .col-xs-2.hidden-xxs
+                img(src="./img/reviews-img-3.png", alt="").reviews__img
+              .col-xs-10
+                img(src="./img/reviews-img-3.png", alt="").reviews__img.visible-xxs
+                .reviews__title Агент Ольга: быстрый подбор квартиры по правильной цене!
+                .clear
+                .reviews__content
+                  p Хочу выразить благодарность Агентству "Подкова" за качественную работу! Обратилась в Агентство для подбора квартиры. Агент Ольга быстро сделала мне подбор квартиры (на ул. Промывочной, 4А) по приемлемой цене и искомым параметрам. Руководитель юридического отдела Виктория профессионально сопроводила мою сделку. Полностью довольна оказанными услугами. Всем советую! 
+                .reviews__name С уважением, Иващенко Татьяна 
+                  span /18 января 2016/
+          
+          +pagination
+          
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom

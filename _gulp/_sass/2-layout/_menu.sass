@@ -12,16 +12,21 @@
   font-size: rem(13)
   font-family: $font-roboto-bold
   line-height: 35px
-  ul
+  &>ul
     margin: 0
     padding: 0
-    li
+    &>li
       list-style: none
       margin: 0
       display: inline-block
       position: relative
       padding-left: 26px
       margin-left: 20px
+      &:hover
+        &>ul
+          transform: translateY(0)
+          opacity: 1
+          visibility: visible
       &.active
         &>a,&>span
           color: #f7bbb0
@@ -65,3 +70,51 @@
         &:hover, &:focus
           text-decoration: none
           color: #f7bbb0
+    ul
+      position: absolute
+      top: 30px
+      right: -27px
+      background: $color-white
+      border-radius: 4px
+      text-transform: uppercase
+      margin: 0
+      padding: 10px 0
+      font-size: rem(13)
+      min-width: 196px
+      text-align: left
+      transform: translateY(10px)
+      opacity: 0
+      visibility: hidden
+      transition: all 0.35s
+      transition-delay: 0.3s
+      box-shadow: 0 0 10px rgba($color-black,.1)
+      &::after
+        position: absolute
+        right: 43px
+        top: -5px
+        height: 0
+        width: 0
+        content: ''
+        border-left: 5px solid transparent
+        border-right: 5px solid transparent
+        border-bottom: 5px solid $color-white
+      li
+        margin: 0
+        list-style: none
+        white-space: nowrap
+        &>a,&>span
+          color: $primary-color
+          display: block
+          padding: 0 20px
+          height: 30px
+          line-height: 30px
+        &>a
+          &:hover
+            color: $color-white
+            background: #c04631
+            text-decoration: none
+        &.active
+          &>a,&>span
+            color: $color-white
+            background: #c04631
+            text-decoration: none

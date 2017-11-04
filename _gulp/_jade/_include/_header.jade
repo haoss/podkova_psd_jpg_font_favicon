@@ -20,19 +20,27 @@ header.header
         button#headerBtn.header__btn(type="button")
           i.ion-navicon-round
           span Меню сайта
-    
-        -var navigation = { 'Главная': '#', 'О компании': '#', 'Услуги': '#', 'Новости': '#', 'Контакты': '#'};
         
         nav#headerNav.navigation(role="navigation")
           ul
-            each val, key in navigation
-              if active === key
-                li.active
-                  a(href=val, title=key)= key
-              else
+            li
+              a(href="#!") Главная
+            li
+              a(href="#!") О компании
+            li
+              a(href="#!") Услуги
+              ul
                 li
-                  a(href=val, title=key)= key
-
+                  a(href="#!") УСЛУГИ ПОКУПАТЕЛЯМ
+                li
+                  a(href="#!") УСЛУГИ ВЛАДЕЛЬЦАМ
+                li
+                  a(href="#!") УСЛУГИ АРЕНДАТОРАМ
+            li
+              a(href="#!") Новости
+            li
+              a(href="#!") Контакты
+              
     .header__quote
       span НАША РЕПУТАЦИЯ 
         br

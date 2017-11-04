@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Контакты - Подкова</title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="./js/libs/owl/assets/owl.carousel.css">
+        <link rel="stylesheet" href="./js/libs/owl/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <!-- Preloader-->
+        <div class="loader">
+            <div class="loader__block"></div>
+        </div>
+        <div class="wrapper">
+            <!-- Header-->
+            <header class="header">
+                <div class="container">
+                    <div class="header__logo"><a href="#!"><img src="./img/header-logo.png" alt=""></a></div>
+                    <div class="header__nav">
+                        <div class="header__nav-background"></div>
+                        <div class="header__nav-top">
+                            <div class="hidden-sm hidden-xs"><i class="icon icon--header-phone1"></i>Пн-Пт 9:00 - 18:00, Сб-Вс 10:00 - 16:00</div>
+                            <div><i class="icon icon--header-phone2"></i><strong>+7 986 54-32-10,  +7 986 54-32-10</strong></div>
+                        </div>
+                        <div class="header__nav-bottom">
+                            <button id="headerBtn" type="button" class="header__btn"><i class="ion-navicon-round"></i><span>Меню сайта</span></button>
+                            <nav id="headerNav" role="navigation" class="navigation">
+                                <ul>
+                                    <li><a href="#!">Главная</a></li>
+                                    <li><a href="#!">О компании</a></li>
+                                    <li><a href="#!">Услуги</a>
+                                        <ul>
+                                            <li><a href="#!">УСЛУГИ ПОКУПАТЕЛЯМ</a></li>
+                                            <li><a href="#!">УСЛУГИ ВЛАДЕЛЬЦАМ</a></li>
+                                            <li><a href="#!">УСЛУГИ АРЕНДАТОРАМ</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#!">Новости</a></li>
+                                    <li><a href="#!">Контакты</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="header__quote"><span>НАША РЕПУТАЦИЯ <br>ПРОВЕРЕНА ВРЕМЕНЕМ</span></div>
+                </div>
+            </header>
+            <!-- Breadcrumbs-->
+            <div class="breadcrumbs">
+                <div class="container">
+                    <ul>
+                        <li><a href="#!">Главная</a></li>
+                        <li><a href="#!">Контакты</a></li>
+                        <li>
+                            <h1>Контакты</h1>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Content-->
+            <div class="content content--text">
+                <div class="container">
+                    <!-- Map-->
+                    <div id="map" class="contact__map"></div>
+                    <!-- Google Map-->
+                    <script src="./js/libs/google-map.js?sensor=false"></script>
+                    <script>
+                        function initialize() {
+                        var myLatlng = new google.maps.LatLng(48.4892244,135.083824);
+                        var map_options = {
+                          zoom: 16,
+                          mapTypeId: google.maps.MapTypeId.ROADMAP,
+                          center: myLatlng,
+                          scrollwheel: false,
+                          disableDefaultUI: true
+                        }
+                        var map = new google.maps.Map(document.getElementById('map'), map_options)
+                        var myIcon = new google.maps.MarkerImage('./img/map-icon.png', null, null, null, new google.maps.Size(85,101));
+                        var marker = new google.maps.Marker({
+                          position: myLatlng,
+                          map: map,
+                          icon: myIcon
+                        });
+                        /* Remove if you dont want B/W Google Map */
+                        /*
+                        var styles = [
+                        {
+                        featureType: "all",
+                        stylers: [
+                        { saturation: -100 }
+                        ]
+                        }
+                        ];
+                        map.setOptions({styles: styles});
+                        */
+                        }
+                        google.maps.event.addDomListener(window, 'load', initialize);
+                    </script>
+                    <!-- Google Map Ends!-->
+                    <div class="contact__content">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="content__head">АГЕНТСТВО НЕДВИЖИМОСТИ “ПОДКОВА”</div>
+                                <table class="table">
+                                    <tr>
+                                        <td><i class="ion-ios-location"></i></td>
+                                        <td>680000, г. Хабаровск, ул. К-Маркса, 65, оф. 100</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="ion-android-mail"></i></td>
+                                        <td> <a href="#!">podkova27@mail.ru</a></td>
+                                    </tr>
+                                </table>
+                                <p>Телефоны:</p>
+                                <table class="table">
+                                    <tr>
+                                        <td><i class="ion-android-call"></i></td>
+                                        <td><a href="callto:#!">(4212) 325-215</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="ion-android-call"></i></td>
+                                        <td><a href="callto:#!">(4212) 933-488</a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="contact__form">
+                                    <div class="contact__form-wrapper">
+                                        <div>
+                                            <div class="h4">У вас еще нет риэлтора?</div>
+                                            <p>Свяжитесь с нами<br><span class="f20">+7 (4212) 325-215</span><br>или оставьте ваш номер, и мы перезвоним в течение 5 минут</p>
+                                        </div>
+                                        <div>
+                                            <form action="#!">
+                                                <div class="form-group">
+                                                    <label class="hidden">Ваш номер</label>
+                                                    <input type="text" placeholder="Ваш номер" class="form-control">
+                                                </div>
+                                                <div class="form-group no--m-bottom">
+                                                    <button type="button" class="btn btn--block">ждем вашего звонка</button><small class="form-small">Отправляя заявку вы соглашаетесь на обработку персональных <a href="#!">данных</a></small>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content__head">Наши специалисты</div>
+                    <!-- Specialist-->
+                    <div class="specialists">
+                        <div class="specialists-wrapper">
+                            <div class="specialists__nav">
+                                <div id="specialistsLeft"><i class="ion-android-arrow-back"></i></div>
+                                <div id="specialistsRight"><i class="ion-android-arrow-forward"></i></div>
+                            </div>
+                            <div class="specialists__carousel">
+                                <div class="specialists__block">
+                                    <div class="specialists__img"><img src="./img/specialist-img-1.png" alt=""></div>
+                                    <div class="specialists__name">кулаков<span>Александр Валерьевич</span></div>
+                                    <div class="specialists__content">
+                                        <table class="table">
+                                            <tr>
+                                                <td><i class="ion-android-call"></i></td>
+                                                <td>8 (924) 313-9222</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="ion-android-call"></i></td>
+                                                <td>+7 (4212) 93-34-88</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="ion-android-mail"></i></td>
+                                                <td> <a href="#!">kulakovuin@mail.ru</a></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="specialists__block">
+                                    <div class="specialists__img"><img src="./img/specialist-img-2.png" alt=""></div>
+                                    <div class="specialists__name">Косилкин <span>Станислав Николаевич</span></div>
+                                    <div class="specialists__content">
+                                        <table class="table">
+                                            <tr>
+                                                <td><i class="ion-android-call"></i></td>
+                                                <td>8 (924) 313-9222</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="ion-android-call"></i></td>
+                                                <td>+7 (4212) 93-34-88</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="ion-android-mail"></i></td>
+                                                <td> <a href="#!">kulakovuin@mail.ru</a></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="specialists__block">
+                                    <div class="specialists__img"><img src="./img/specialist-img-3.png" alt=""></div>
+                                    <div class="specialists__name">графчикова<span>Светлана Валентиновна</span></div>
+                                    <div class="specialists__content">
+                                        <table class="table">
+                                            <tr>
+                                                <td><i class="ion-android-call"></i></td>
+                                                <td>8 (924) 313-9222</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="ion-android-call"></i></td>
+                                                <td>+7 (4212) 93-34-88</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="ion-android-mail"></i></td>
+                                                <td> <a href="#!">kulakovuin@mail.ru</a></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="specialists__block">
+                                    <div class="specialists__img"><img src="./img/specialist-img-4.png" alt=""></div>
+                                    <div class="specialists__name">бондарь<span>Ольга Геннадьевна</span></div>
+                                    <div class="specialists__content">
+                                        <table class="table">
+                                            <tr>
+                                                <td><i class="ion-android-call"></i></td>
+                                                <td>8 (924) 313-9222</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="ion-android-call"></i></td>
+                                                <td>+7 (4212) 93-34-88</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="ion-android-mail"></i></td>
+                                                <td> <a href="#!">kulakovuin@mail.ru</a></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="specialists__block">
+                                    <div class="specialists__img"><img src="./img/specialist-img-1.png" alt=""></div>
+                                    <div class="specialists__name">кулаков<span>Александр Валерьевич</span></div>
+                                    <div class="specialists__content">
+                                        <table class="table">
+                                            <tr>
+                                                <td><i class="ion-android-call"></i></td>
+                                                <td>8 (924) 313-9222</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="ion-android-call"></i></td>
+                                                <td>+7 (4212) 93-34-88</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="ion-android-mail"></i></td>
+                                                <td> <a href="#!">kulakovuin@mail.ru</a></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="specialists__block">
+                                    <div class="specialists__img"><img src="./img/specialist-img-2.png" alt=""></div>
+                                    <div class="specialists__name">Косилкин <span>Станислав Николаевич</span></div>
+                                    <div class="specialists__content">
+                                        <table class="table">
+                                            <tr>
+                                                <td><i class="ion-android-call"></i></td>
+                                                <td>8 (924) 313-9222</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="ion-android-call"></i></td>
+                                                <td>+7 (4212) 93-34-88</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="ion-android-mail"></i></td>
+                                                <td> <a href="#!">kulakovuin@mail.ru</a></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="specialists__block">
+                                    <div class="specialists__img"><img src="./img/specialist-img-3.png" alt=""></div>
+                                    <div class="specialists__name">графчикова<span>Светлана Валентиновна</span></div>
+                                    <div class="specialists__content">
+                                        <table class="table">
+                                            <tr>
+                                                <td><i class="ion-android-call"></i></td>
+                                                <td>8 (924) 313-9222</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="ion-android-call"></i></td>
+                                                <td>+7 (4212) 93-34-88</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="ion-android-mail"></i></td>
+                                                <td> <a href="#!">kulakovuin@mail.ru</a></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="specialists__block">
+                                    <div class="specialists__img"><img src="./img/specialist-img-4.png" alt=""></div>
+                                    <div class="specialists__name">бондарь<span>Ольга Геннадьевна</span></div>
+                                    <div class="specialists__content">
+                                        <table class="table">
+                                            <tr>
+                                                <td><i class="ion-android-call"></i></td>
+                                                <td>8 (924) 313-9222</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="ion-android-call"></i></td>
+                                                <td>+7 (4212) 93-34-88</td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="ion-android-mail"></i></td>
+                                                <td> <a href="#!">kulakovuin@mail.ru</a></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer-->
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-3 hidden-xs">
+                            <div class="footer__logo"><img src="./img/footer-logo.png" alt=""></div>
+                            <div class="footer__copyright">©2000-2017 Федеральная риелторская компания. Все права защищены. </div>
+                        </div>
+                        <div class="col-sm-3 hidden-xs">
+                            <div class="footer__title">меню</div>
+                            <ul class="footer__nav">
+                                <li><a href="#!">О компании</a></li>
+                                <li><a href="#">Услуги</a></li>
+                                <li><a href="#">новости</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="footer__title">следите за нами</div>
+                            <div class="footer__social"><a href="#!">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewbox="0 0 30.000001 30.000001" width="30" height="30">
+                                        <path d="M15 0C6.718 0 0 6.715 0 15s6.717 15 15 15c8.285 0 15-6.715 15-15S23.285 0 15 0zm7.61 16.622c.7.683 1.438 1.326 2.066 2.08.277.333.54.678.74 1.066.285.55.027 1.158-.468 1.19h-3.073c-.793.066-1.425-.254-1.957-.796-.426-.433-.82-.895-1.23-1.343-.167-.184-.342-.356-.552-.493-.42-.272-.784-.188-1.024.25-.244.444-.3.937-.323 1.433-.034.724-.253.915-.98.948-1.554.073-3.03-.162-4.398-.946-1.208-.69-2.145-1.666-2.96-2.77-1.587-2.15-2.802-4.514-3.895-6.944-.246-.547-.066-.84.538-.85 1.003-.02 2.005-.02 3.01-.002.407.006.677.24.834.624.542 1.334 1.205 2.603 2.04 3.78.22.313.447.626.77.847.356.244.627.163.795-.234.106-.252.153-.523.176-.793.08-.928.092-1.854-.048-2.778-.085-.577-.41-.95-.986-1.06-.294-.055-.25-.165-.108-.332.247-.29.48-.47.943-.47h3.474c.547.108.67.354.744.904l.003 3.86c-.005.212.107.844.49.985.308.1.51-.146.695-.34.83-.884 1.425-1.927 1.955-3.007.236-.475.438-.97.634-1.462.146-.364.373-.544.786-.536l3.343.003c.098 0 .2 0 .295.018.563.096.718.338.544.888-.274.863-.808 1.583-1.33 2.305-.557.772-1.153 1.517-1.706 2.293-.508.71-.468 1.066.163 1.682zm0 0" fill-rule="evenodd" fill="#ee560e"></path>
+                                    </svg></a><a href="#!">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewbox="0 0 30.000001 30.000001" width="30" height="30">
+                                        <g fill="#ee560e" fill-rule="evenodd">
+                                            <path d="M15.014 12.432c1.433-.006 2.573-1.155 2.57-2.59-.007-1.438-1.15-2.58-2.583-2.58-1.444-.003-2.598 1.162-2.587 2.61.01 1.43 1.164 2.565 2.6 2.56zm0 0"></path>
+                                            <path d="M15 0C6.716 0 0 6.717 0 15c0 8.285 6.715 15 15 15s15-6.715 15-15c0-8.283-6.715-15-15-15zm.022 4.562c2.922.007 5.266 2.398 5.25 5.35-.013 2.887-2.397 5.227-5.313 5.216-2.89-.01-5.257-2.404-5.24-5.294.016-2.924 2.386-5.28 5.302-5.272zm5.918 12.642c-.646.663-1.424 1.143-2.29 1.48-.814.315-1.71.474-2.594.58.133.146.196.217.28.3 1.202 1.21 2.41 2.41 3.607 3.623.408.413.493.925.27 1.405-.247.524-.798.87-1.337.833-.342-.024-.608-.193-.845-.432-.906-.912-1.83-1.81-2.72-2.74-.258-.27-.383-.218-.61.016-.913.938-1.84 1.865-2.773 2.783-.42.414-.917.49-1.404.252-.515-.25-.845-.776-.82-1.307.018-.358.195-.632.44-.878 1.19-1.187 2.376-2.378 3.563-3.568.08-.08.153-.163.267-.286-1.62-.168-3.078-.567-4.328-1.544-.155-.12-.315-.24-.456-.374-.548-.526-.603-1.127-.17-1.748.37-.53.99-.67 1.636-.367.126.058.245.134.36.21 2.327 1.602 5.527 1.645 7.863.073.23-.177.48-.322.765-.395.56-.143 1.08.062 1.377.55.343.558.34 1.102-.082 1.534zm0 0"></path>
+                                        </g>
+                                    </svg></a><a href="#!">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewbox="0 0 30.000001 30.000001" width="30" height="30">
+                                        <path d="M15 0C6.716 0 0 6.715 0 15s6.715 15 15 15 15-6.715 15-15S23.285 0 15 0zm5.723 7.638l-2.075.002c-1.627 0-1.942.773-1.942 1.908v2.5h3.88l-.002 3.92h-3.878V26.02H12.66V15.966H9.278v-3.918h3.382v-2.89c0-3.35 2.05-5.178 5.04-5.178l3.024.005v3.653zm0 0" fill="#ee560e"></path>
+                                    </svg></a><a href="#!">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewbox="0 0 30.000001 30.000001" width="30" height="30">
+                                        <g fill="#ee560e" fill-rule="evenodd">
+                                            <path d="M12.268 18.287L19 14.797c-2.258-1.18-4.488-2.342-6.732-3.514v7.004zm0 0"></path>
+                                            <path d="M15 0C6.718 0 0 6.715 0 15s6.717 15 15 15c8.285 0 15-6.715 15-15S23.285 0 15 0zm10.22 20.007c-.26 1.126-1.18 1.958-2.29 2.08-2.626.294-5.283.296-7.93.294-2.647.003-5.306 0-7.933-.293-1.11-.122-2.03-.954-2.288-2.08-.37-1.604-.37-3.355-.37-5.006 0-1.652.003-3.403.374-5.007.257-1.126 1.18-1.958 2.288-2.08 2.627-.294 5.285-.296 7.932-.294 2.646-.003 5.305 0 7.93.293 1.11.122 2.032.954 2.292 2.08.368 1.604.365 3.356.365 5.008 0 1.652 0 3.403-.37 5.007zm0 0"></path>
+                                        </g>
+                                    </svg></a><a href="#!">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewbox="0 0 30.000001 30.000001" width="30" height="30">
+                                        <path d="M15 0C6.716 0 0 6.715 0 15s6.715 15 15 15 15-6.715 15-15S23.285 0 15 0zm9.07 11c.008.176.012.355.012.533 0 6.408-4.876 13.035-13.036 13.035-2.494 0-4.923-.712-7.022-2.06-.045-.026-.063-.08-.045-.13.017-.048.066-.078.116-.073.353.042.713.063 1.07.063 1.942 0 3.777-.6 5.33-1.74-1.86-.154-3.462-1.416-4.037-3.213-.013-.037-.004-.078.022-.108.025-.03.065-.042.103-.036.517.1 1.04.106 1.548.024-1.922-.597-3.272-2.397-3.272-4.445v-.06c.003-.04.024-.076.058-.095.033-.02.075-.02.108 0 .5.277 1.055.455 1.625.524-1.104-.88-1.75-2.214-1.75-3.64 0-.824.216-1.633.628-2.34.02-.032.05-.053.087-.056.038-.003.072.012.096.04 2.26 2.773 5.583 4.478 9.138 4.7-.06-.3-.09-.608-.09-.918 0-2.566 2.087-4.653 4.653-4.653 1.263 0 2.483.518 3.357 1.424.984-.2 1.922-.563 2.788-1.077.04-.024.09-.02.126.01.037.028.052.076.037.12-.293.92-.866 1.72-1.635 2.298.724-.126 1.428-.34 2.097-.635.043-.022.096-.008.13.03.03.037.034.092.005.133-.608.912-1.364 1.7-2.245 2.344zm0 0" fill="#ee560e"></path>
+                                    </svg></a></div>
+                            <div class="footer__copyright visible-xs">©2000-2017 Федеральная риелторская компания. Все права защищены. </div>
+                        </div>
+                        <div class="col-sm-3 hidden-xs">
+                            <div class="footer__title">Контакты</div>
+                            <div class="footer__address">
+                                <div class="footer__address-wrapper">г. Хабаровск,<br>ул. К-Маркса, 65, оф. 100<br>Тел.:  (4212) 325-215<br>Тел.:  (4212) 933-488</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!--[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+        
+        -->
+        <!-- Load Scripts-->
+        <script src="./js/libs.js"></script>
+        <!-- Footer js-->
+        <script src="./js/libs/owl/owl.carousel.min.js"></script>
+        <script src="./js/common.js"></script>
+    </body>
+</html>

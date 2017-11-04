@@ -214,3 +214,291 @@ ul.list
       width: 12px
       height: 13px
       background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAANCAYAAACdKY9CAAABKklEQVQokY3SsUtWcRTG8c+9RBTke/khgiGIiAgtueiWDhIhhk72Xhyc/AuEWhuadHNya5PqNzWJYG625SpETo4ivdffUCYk1+G9gkMv9l3P85zzcM7J6roGVVk8xBpWMI4M37GNzRDTb8jqulaVxQC+oMAwTvAXQ0g4w/MQ01nWabcy7GMVB/iBV7jCB8zr8hUzORYwi3Os40WIqRNiSljERmN4hqWs0259agr9IaYL/6Aqi2W8x26OGbztJYYQ00e8w3SOxxityuJeL0NVFg/wBAM5/uAlHvUyYLDRnOf4qbvKu+jHZY69/xDfsJd12q1JfMMcTvErxHTcZB9roo7gM6ZuLr2DKdzHSYhpojEc4mnT6CjENJc3o17r/s42pm9FmMUW+vAGrgF5hFhIzHQWYQAAAABJRU5ErkJggg==') 0 0 no-repeat
+
+.reviews
+  &__row
+    font-size: rem(13)
+    padding-bottom: 30px
+    margin-bottom: 30px
+    border-bottom: 1px solid #e3e3e3
+    &:last-child
+      border-bottom: 0
+  &__img
+    position: relative
+    overflow: hidden
+    border-radius: 4px
+    max-width: 100%
+    height: auto
+    display: block
+  &__title
+    font-family: $font-roboto-medium
+    font-size: rem(20)
+    line-height: 1.2
+    margin-bottom: 15px
+  &__content
+    // p
+    //   &:last-child
+    //     margin-bottom: 0
+  &__name
+    font-family: $font-roboto-medium
+    font-size: rem(13)
+    span
+      font-family: $font-roboto-light
+      color: #a0a0a0
+
+.contact
+  &__map
+    position: relative
+    overflow: hidden
+    border-radius: 4px
+    margin-bottom: 40px
+    height: 0
+    padding-bottom: 400px
+    background: $color-lightgray
+  &__content
+    margin-bottom: 50px
+    .table
+      td
+        vertical-align: top
+        &:first-child
+          text-align: center
+      &:last-child
+        margin-bottom: 0
+    a
+      &[href*='callto:']
+        color: $primary-color
+        &:hover
+          color: $color-orange
+  &__form
+    background: $color-lightgray
+    overflow: hidden
+    border-radius: 4px
+    padding: 25px 34px
+    font-size: rem(12)
+    min-height: 190px
+    .f20
+      font-size: rem(20)
+      font-family: $font-roboto-medium
+    &-wrapper
+      display: table
+      width: 100%
+      &>div
+        display: table-cell
+        vertical-align: top
+        &:first-child
+          width: 45%
+        &+div
+          padding-left: 30px
+      p
+        &:last-child
+          margin-bottom: 0
+
+.specialists
+  position: relative
+  overflow: hidden
+  padding-top: 48px
+  margin-top: -48px
+  margin-right: 1px
+  &-wrapper
+    width: calc(100% + 1px)
+  &__block
+    width: 100%
+    max-width: 286px
+    font-size: rem(12)
+    color: $primary-color
+    text-align: center
+    height: 320px
+    padding-top: 20px
+    border-right: 1px solid #eeeff2
+    margin: 0 auto
+  &__img
+    height: 160px
+    width: 150px
+    position: relative
+    overflow: hidden
+    border-radius: 0 0 75px 75px
+    margin: 0 auto 20px
+    background: $color-lightgray
+    &::before, &::after
+      position: absolute
+      width: 44px
+      height: 44px
+      content: ''
+      background: $color-white
+      top: -22px
+      border-radius: 50%
+    &::before
+      left: -22px
+    &::after
+      right: -22px
+  &__name
+    font-family: $font-roboto-medium
+    text-transform: uppercase
+    font-size: rem(16)
+    margin-bottom: 20px
+    span
+      text-transform: none
+      font-size: rem(13)
+      font-family: $font-roboto
+      display: block
+  &__content
+    .table
+      max-width: 140px
+      display: inline-table
+      text-align: left
+      td
+        padding-top: 0
+        padding-bottom: 0
+      i
+        font-size: rem(14)
+  .owl-nav
+    position: absolute
+    top: -50px
+    right: 0
+  &__nav
+    position: absolute
+    right: 0
+    top: 0
+
+#specialistsLeft, #specialistsRight, #newslistLeft, #newslistRight
+  cursor: pointer
+  display: inline-block
+  width: 30px
+  line-height: 30px
+  height: 30px
+  text-align: center
+  border-radius: 50%
+  color: $primary-color
+  background: #f7f8fa
+  &:hover, &:focus
+    color: $color-white
+    background: $color-orange
+
+.services
+  padding: 90px 0
+  background: $color-orange url('../img/services-background.png') top center no-repeat
+  background-size: cover
+  &__wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin-right: -10px
+    +clearfix
+  &__block
+    background: $color-white
+    width: 285px
+    height: 80px
+    overflow: hidden
+    display: flex
+    justify-content: center
+    align-items: center
+    font-family: $font-roboto-bold
+    font-size: rem(14)
+    text-transform: uppercase
+    color: $primary-color
+    text-align: center
+    position: relative
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 101% 16px, calc(100% - 14px) 0)
+    margin-bottom: 1px
+    margin-left: 1px
+    &::before
+      position: absolute
+      right: 0
+      top: 0
+      width: 14px
+      height: 14px
+      content: ''
+      background: #d8d8d8
+    &:hover, &:focus
+      text-decoration: none
+
+.main-about
+  padding: 80px 0 70px 0
+  background: $color-lightgray
+  font-size: rem(15)
+  color: $primary-color
+  &__wrapper
+    position: relative
+    padding-right: 390px
+    p
+      position: relative
+      z-index: 1
+  &__img
+    position: absolute
+    bottom: -90px
+    right: -116px
+
+.news-list
+  &__wrapper
+    margin: 0 -15px
+  &__nav
+    margin-top: -55px
+    padding-left: 15px
+    position: absolute
+  &__head
+    text-transform: uppercase
+    padding-left: 100px
+    font-size: rem(14)
+    font-family: $font-roboto-medium
+    float: left
+    margin-bottom: 30px
+  &__link
+    float: right
+    color: $color-orange
+    text-transform: uppercase
+    font-family: $font-roboto-medium
+    font-size: rem(14)
+  &__block
+    position: relative
+    background: $color-white
+    border-radius: 10px
+    overflow: hidden
+    height: 300px
+    width: 100%
+    border: 2px solid $color-lightgray
+    opacity: 0
+    transition: opacity 0.35s
+    &-img
+      position: absolute
+      left: 0
+      top: 0
+      width: 200px
+      bottom: 0
+      background: $color-gray
+      overflow: hidden
+      border-radius: 10px 0 0 10px
+      img
+        max-width: inherit
+        width: auto !important
+    &-content
+      padding: 45px 24px 10px 30px
+      margin-left: 176px
+      position: relative
+      z-index: 5
+      background: linear-gradient(to left, $color-white calc(100% - 15px), rgba($color-white,.7))
+      height: 100%
+    &-name
+      font-size: rem(20)
+      margin-bottom: 15px
+      line-height: 22px
+    p
+      line-height: 21px
+
+.active
+  .news-list__block
+    opacity: 1
+
+.four-blocks
+  padding: 60px 0
+  &__block
+    display: table
+    text-transform: uppercase
+    font-family: $font-roboto-bold
+    font-size: rem(14)
+    &>div
+      display: table-cell
+      vertical-align: middle
+      &+div
+        padding-left: 30px
+      &:first-child
+        width: 1px
