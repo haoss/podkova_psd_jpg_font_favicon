@@ -16,6 +16,36 @@
         <div class="loader">
             <div class="loader__block"></div>
         </div>
+        <div id="popup-question" class="popup mfp-hide">
+            <div class="popup__wrapper">
+                <div class="popup__close"><i class="ion-ios-close"></i></div>
+                <form action="#!">
+                    <div class="popup__title">остались вопросы?</div>
+                    <div class="form-group block-focus">
+                        <label class="hidden">ФИО</label>
+                        <input type="text" placeholder="ФИО" value="Иванов Иван" class="form-control input-focus">
+                    </div>
+                    <div class="form-group block-focus">
+                        <label class="hidden">Ваш телефон</label>
+                        <input type="text" placeholder="Ваш телефон" class="form-control input-focus">
+                    </div>
+                    <div class="form-group block-focus">
+                        <label class="hidden">Ваша почта</label>
+                        <input type="text" placeholder="Ваша почта" class="form-control input-focus">
+                    </div>
+                    <div class="form-group block-focus">
+                        <label class="hidden">Ваше сообщение</label>
+                        <textarea placeholder="Ваше сообщение" name="message" class="form-control input-focus"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkbox" class="form-checkbox">
+                            <input id="checkbox" type="checkbox" checked="" class="form-checkbox__input"><span class="form-checkbox__span"></span><span class="form-checkbox__label">Согласен на обработку моих личных данных. <a href="#!" target="_blank">Политика конфиденциальности</a></span>
+                        </label>
+                    </div>
+                    <button type="button" class="btn btn--block">Отправить сообщение</button>
+                </form>
+            </div>
+        </div>
         <div class="wrapper">
             <!-- Header-->
             <header class="header">
@@ -49,42 +79,67 @@
                     <div class="header__quote"><span>НАША РЕПУТАЦИЯ <br>ПРОВЕРЕНА ВРЕМЕНЕМ</span></div>
                 </div>
             </header>
+            <!-- Main slider-->
+            <div class="main-slider">
+                <div class="main-slider__carousel">
+                    <div class="main-slider__block main-slider__block--1">
+                        <div class="container"><a href="#popup-question" class="btn btn--big btn--slide1 open-popup-link">Бесплатная консультация</a></div>
+                    </div>
+                    <div class="main-slider__block main-slider__block--2">
+                        <div class="container"><a href="#popup-question" class="btn btn--big btn--slide2 open-popup-link">Задать вопрос</a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 4 block-->
+            <div class="four-blocks">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-3 col-xs-6">
+                            <div class="four-blocks__block">
+                                <div><img src="./img/four-blocks-1.png" alt=""></div>
+                                <div><span>работаем <br>с 1993 года</span></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-6">
+                            <div class="four-blocks__block">
+                                <div><img src="./img/four-blocks-2.png" alt=""></div>
+                                <div><span>Профессиональные <br>сотрудники</span></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-6">
+                            <div class="four-blocks__block">
+                                <div><img src="./img/four-blocks-3.png" alt=""></div>
+                                <div><span>Юридическая <br>поддержка</span></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-6">
+                            <div class="four-blocks__block">
+                                <div><img src="./img/four-blocks-4.png" alt=""></div>
+                                <div><span>банки <br>партнеры</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- Content-->
             <div class="content">
-                <!-- Main slider-->
-                <div class="main-slider"></div>
-                <!-- 4 block-->
-                <div class="four-blocks">
+                <!-- Special-->
+                <div class="special">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="four-blocks__block">
-                                    <div><img src="./img/four-blocks-1.png" alt=""></div>
-                                    <div><span>работаем <br>с 1993 года</span></div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="four-blocks__block">
-                                    <div><img src="./img/four-blocks-2.png" alt=""></div>
-                                    <div><span>Профессиональные <br>сотрудники</span></div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="four-blocks__block">
-                                    <div><img src="./img/four-blocks-3.png" alt=""></div>
-                                    <div><span>Юридическая <br>поддержка</span></div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="four-blocks__block">
-                                    <div><img src="./img/four-blocks-4.png" alt=""></div>
-                                    <div><span>банки <br>партнеры</span></div>
+                        <div class="special__carousel">
+                            <div class="special__block">
+                                <div class="special__block-wrapper">
+                                    <div>
+                                        <div class="special__block-img"><img src="./img/special-img-1.png" alt=""></div>
+                                    </div>
+                                    <div>
+                                        <div class="special__block-content"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="clear100"></div>
                 <!-- Main about-->
                 <div class="section main-about">
                     <div class="container">

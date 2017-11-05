@@ -18,3 +18,31 @@ mixin pagination
       li
         a(href="#!")
           i.ion-android-arrow-forward
+
+#popup-question.popup.mfp-hide
+  .popup__wrapper
+    .popup__close
+      i.ion-ios-close
+    form(action="#!")
+      .popup__title остались вопросы?
+      .form-group.block-focus
+        label.hidden ФИО
+        input(type="text" placeholder="ФИО" value="Иванов Иван").form-control.input-focus
+      .form-group.block-focus
+        label.hidden Ваш телефон
+        input(type="text" placeholder="Ваш телефон").form-control.input-focus
+      .form-group.block-focus
+        label.hidden Ваша почта
+        input(type="text" placeholder="Ваша почта").form-control.input-focus
+      .form-group.block-focus
+        label.hidden Ваше сообщение
+        textarea(placeholder="Ваше сообщение" name="message").form-control.input-focus
+      .form-group
+        label.form-checkbox(for='checkbox')
+          input#checkbox.form-checkbox__input(type='checkbox', checked='')
+          span.form-checkbox__span
+          span.form-checkbox__label
+            | Согласен на обработку моих личных данных. 
+            a(href='#!', target='_blank') Политика конфиденциальности
+
+      button(type="button").btn.btn--block Отправить сообщение

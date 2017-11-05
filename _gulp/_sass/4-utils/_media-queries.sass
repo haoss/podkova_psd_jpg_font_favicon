@@ -47,6 +47,15 @@
       padding-left: 15px
     img
       width: 50px
+  .main-slider
+    &__block
+      height: 575px
+  .btn
+    &--slide1
+      margin-left: 18px
+      margin-top: 278px
+    &--slide2
+      margin-top: 312px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -143,6 +152,23 @@
           width: 100%
       img
         margin: 0 auto
+  .main-slider
+    &__block
+      height: 515px
+      background-size: auto 515px
+      background-position: 36%
+  .btn
+    &--slide1, &--slide2
+      height: 38px
+      line-height: 38px
+      min-width: 234px
+      font-size: rem(11)
+      margin-left: 45px
+      margin-top: 270px
+    &--slide2
+      margin-left: 30px
+      margin-top: 283px
+      min-width: 204px
 
 @media (min-width: 767px) and (max-width: 991px)
   .sidebar
@@ -236,11 +262,37 @@
     &__block
       width: 224px
   .four-blocks
+    margin-top: 0
+    background: $color-white
     .row
       &>div
         &:nth-child(1), &:nth-child(2)
           .four-blocks__block
             margin-bottom: 35px
+  .main-slider
+    .owl-dots
+      margin-top: -5px
+    &__block
+      height: 492px
+      background-size: cover
+      background-position: top center
+      &--1
+        background-image: url('../img/main-slider-img-1--480.png')
+      &--2
+        background-image: url('../img/main-slider-img-2--480.png')
+  .btn
+    &--slide1, &--slide2
+      position: absolute
+      margin-top: 0
+      bottom: 27px
+      margin-left: 10px
+      min-width: 204px
+
+@media only screen and (max-width : 500px)
+  .main-slider
+    &__block
+      height: 314px
+      background-position: left top
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -312,6 +364,14 @@
   .four-blocks
     &__block
       font-size: rem(12)
+  .main-slider
+    &__block
+      background-size: cover
+      background-position: top center
+      &--1
+        background-image: url('../img/main-slider-img-1--320.png')
+      &--2
+        background-image: url('../img/main-slider-img-2--320.png')
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

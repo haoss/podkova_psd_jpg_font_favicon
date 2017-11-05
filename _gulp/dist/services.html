@@ -16,6 +16,36 @@
         <div class="loader">
             <div class="loader__block"></div>
         </div>
+        <div id="popup-question" class="popup mfp-hide">
+            <div class="popup__wrapper">
+                <div class="popup__close"><i class="ion-ios-close"></i></div>
+                <form action="#!">
+                    <div class="popup__title">остались вопросы?</div>
+                    <div class="form-group block-focus">
+                        <label class="hidden">ФИО</label>
+                        <input type="text" placeholder="ФИО" value="Иванов Иван" class="form-control input-focus">
+                    </div>
+                    <div class="form-group block-focus">
+                        <label class="hidden">Ваш телефон</label>
+                        <input type="text" placeholder="Ваш телефон" class="form-control input-focus">
+                    </div>
+                    <div class="form-group block-focus">
+                        <label class="hidden">Ваша почта</label>
+                        <input type="text" placeholder="Ваша почта" class="form-control input-focus">
+                    </div>
+                    <div class="form-group block-focus">
+                        <label class="hidden">Ваше сообщение</label>
+                        <textarea placeholder="Ваше сообщение" name="message" class="form-control input-focus"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkbox" class="form-checkbox">
+                            <input id="checkbox" type="checkbox" checked="" class="form-checkbox__input"><span class="form-checkbox__span"></span><span class="form-checkbox__label">Согласен на обработку моих личных данных. <a href="#!" target="_blank">Политика конфиденциальности</a></span>
+                        </label>
+                    </div>
+                    <button type="button" class="btn btn--block">Отправить сообщение</button>
+                </form>
+            </div>
+        </div>
         <div class="wrapper">
             <!-- Header-->
             <header class="header">

@@ -26,6 +26,12 @@ button, html input[type=button], input[type=reset], input[type=submit]
 .form
   &-group,  &__group
     margin-bottom: 15px
+    &.is-focus
+      .input-focus
+        background: $color-white
+        border-color: #dddddd
+        font-family: $font-roboto-bold
+        color: $primary-color
 
   &-control, &__control
     display: block
@@ -41,6 +47,19 @@ button, html input[type=button], input[type=reset], input[type=submit]
     border-radius: 30px
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075)
     transition: border-color all .35s, box-shadow all .35s
+    &.input-focus
+      background: $color-lightgray
+      border-color: $color-lightgray
+      box-shadow: none
+      color: $primary-color
+      &::-webkit-input-placeholder
+        color: $primary-color
+      &::-moz-placeholder
+        color: $primary-color
+      &:-ms-input-placeholder
+        color: $primary-color
+      &:-moz-placeholder
+        color: $primary-color
 
   &-small
     color: #868686
@@ -54,10 +73,60 @@ button, html input[type=button], input[type=reset], input[type=submit]
       &:hover
         text-decoration: none
 
+  &-checkbox, &-radio
+    font-size: rem(11)
+    position: relative
+    padding-left: 20px
+    font-weight: 400
+    display: block
+    margin-bottom: 0
+    &__input
+      display: none
+      &:checked
+        &+.form-checkbox__span, &+.form-radio__span
+          &::before
+            content: "\f373"
+      &+.form-checkbox__span, &+.form-radio__span
+        display: block
+        position: absolute
+        left: 0
+        top: -4px
+        color: $color-orange
+        font-family: $font-ionicons
+        font-size: rem(16)
+        &::before
+          content: "\f372"
+    &--row
+      font-size: rem(14)
+      padding-left: 28px
+      .form-checkbox__span, .form-radio__span
+        font-size: rem(18)
+        top: -2px
+        color: #adadad
+      .form-checkbox__label, .form-radio__label
+        small
+          font-size: rem(11)
+      .form-checkbox__input, .form-radio__input
+        &:checked
+          &~.form-checkbox__label, &~.form-radio__label
+            strong
+              color: $color-orange
+          &~.form-checkbox__span, &~.form-radio__span
+            color: $color-orange
+    &__label
+      font-weight: 400
+      display: block
+      font-family: $font-roboto
+      a
+        text-decoration: underline
+        &:hover
+          text-decoration: none
+
 textarea
   &.form-control, &.form__control
     height: 150px
     resize: none
+    border-radius: 15px
 
 label
   display: inline-block

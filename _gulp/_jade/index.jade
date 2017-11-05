@@ -15,52 +15,72 @@ html(lang="ru")
     .wrapper
     
       include ./_include/_header
+      
+      // Main slider
+      .main-slider
+        .main-slider__carousel
+          .main-slider__block.main-slider__block--1
+            .container
+              a(href="#popup-question").btn.btn--big.btn--slide1.open-popup-link Бесплатная консультация
+          .main-slider__block.main-slider__block--2
+            .container
+              a(href="#popup-question").btn.btn--big.btn--slide2.open-popup-link Задать вопрос
+          
+
+      // 4 block
+      .four-blocks
+        .container
+          
+          .row
+            .col-sm-3.col-xs-6
+              .four-blocks__block
+                div
+                  img(src="./img/four-blocks-1.png", alt="")
+                div
+                  span работаем 
+                    br
+                    | с 1993 года
+            .col-sm-3.col-xs-6
+              .four-blocks__block
+                div
+                  img(src="./img/four-blocks-2.png", alt="")
+                div
+                  span Профессиональные 
+                    br
+                    | сотрудники
+            .col-sm-3.col-xs-6
+              .four-blocks__block
+                div
+                  img(src="./img/four-blocks-3.png", alt="")
+                div
+                  span Юридическая 
+                    br
+                    | поддержка
+            .col-sm-3.col-xs-6
+              .four-blocks__block
+                div
+                  img(src="./img/four-blocks-4.png", alt="")
+                div
+                  span банки 
+                    br
+                    | партнеры
+      
 
       // Content
       .content
         
-        // Main slider
-        .main-slider
-        
-        // 4 block
-        .four-blocks
+        // Special
+        .special
           .container
-            
-            .row
-              .col-sm-3.col-xs-6
-                .four-blocks__block
+          
+            .special__carousel
+              .special__block
+                .special__block-wrapper
                   div
-                    img(src="./img/four-blocks-1.png", alt="")
+                    .special__block-img
+                      img(src="./img/special-img-1.png", alt="")
                   div
-                    span работаем 
-                      br
-                      | с 1993 года
-              .col-sm-3.col-xs-6
-                .four-blocks__block
-                  div
-                    img(src="./img/four-blocks-2.png", alt="")
-                  div
-                    span Профессиональные 
-                      br
-                      | сотрудники
-              .col-sm-3.col-xs-6
-                .four-blocks__block
-                  div
-                    img(src="./img/four-blocks-3.png", alt="")
-                  div
-                    span Юридическая 
-                      br
-                      | поддержка
-              .col-sm-3.col-xs-6
-                .four-blocks__block
-                  div
-                    img(src="./img/four-blocks-4.png", alt="")
-                  div
-                    span банки 
-                      br
-                      | партнеры
-        
-        .clear100
+                    .special__block-content
         
         // Main about
         .section.main-about

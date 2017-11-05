@@ -76,11 +76,16 @@ $(document).on('ready', function(){
 
   $('.open-popup-link').magnificPopup({
     type: 'inline',
-    midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+    midClick: true,
+    showCloseBtn: false
+  });
+  $('.popup__close').on('click', function(){
+    $.magnificPopup.close();
   });
 
   imgThumbnails();
   mobileMenu();
+  inputFocus();
 
   var owl = $('.specialists__carousel');
   owl.owlCarousel({
@@ -129,6 +134,16 @@ $(document).on('ready', function(){
   })
   $('#newslistRight').click(function(){
       owl2.trigger('next.owl.carousel');
+  });
+
+  $('.main-slider__carousel').owlCarousel({
+    items: 1,
+    nav: false,
+    dots: true,
+    loop: true,
+    mouseDrag: false,
+    autoplay: true,
+    autoplayTimeout: 5000
   });
 
   // Chrome Smooth Scroll
@@ -245,4 +260,17 @@ function mobileMenu(){
       }, 400)
     }
   });
+}
+
+function inputFocus(){
+  $('.input-focus').each(function(){
+    var _this = $(this);
+    _this.focus(function() {
+      _this.parents('.block-focus').addClass('is-focus');
+    }).blur(function() {
+      if (!_this.val().length > 0) {
+        _this.parents('.block-focus').removeClass('is-focus');
+      }
+    });
+  })
 }
