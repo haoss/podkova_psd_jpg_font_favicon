@@ -146,6 +146,16 @@ $(document).on('ready', function(){
     autoplayTimeout: 5000
   });
 
+  $('.special__carousel').owlCarousel({
+    items: 1,
+    nav: false,
+    dots: true,
+    loop: true,
+    mouseDrag: true,
+    autoplay: true,
+    autoplayTimeout: 5000
+  });
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();

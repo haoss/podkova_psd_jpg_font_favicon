@@ -56,6 +56,12 @@
       margin-top: 278px
     &--slide2
       margin-top: 312px
+  .special
+    &__block
+      &-img
+        width: 470px
+    .owl-theme .owl-dots
+      width: 470px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -169,6 +175,12 @@
       margin-left: 30px
       margin-top: 283px
       min-width: 204px
+  .special
+    &__block
+      &-img
+        width: 300px
+    .owl-theme .owl-dots
+      width: 300px
 
 @media (min-width: 767px) and (max-width: 991px)
   .sidebar
@@ -287,6 +299,23 @@
       bottom: 27px
       margin-left: 10px
       min-width: 204px
+  .special
+    max-width: 550px
+    margin: 0 auto 50px
+    &__block
+      &-wrapper
+        display: block
+        &>div
+          display: block
+          &:first-child
+            width: auto
+      &-img
+        width: 100%
+        border-radius: 10px
+        margin-bottom: 25px
+    .owl-theme .owl-dots
+      bottom: 300px
+      width: 100%
 
 @media only screen and (max-width : 500px)
   .main-slider
@@ -372,6 +401,22 @@
         background-image: url('../img/main-slider-img-1--320.png')
       &--2
         background-image: url('../img/main-slider-img-2--320.png')
+  .special
+    &__block
+      &-content
+        padding: 0 15px 0 15px
+        &-row
+          &--1
+            height: auto
+            min-height: 116px
+            strong
+              white-space: normal
+          &--3
+            .btn
+              min-width: 93px
+    .owl-theme .owl-dots
+      bottom: inherit
+      top: 310px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)
