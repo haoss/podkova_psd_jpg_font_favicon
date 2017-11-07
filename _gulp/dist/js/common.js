@@ -142,8 +142,8 @@ $(document).on('ready', function(){
     dots: true,
     loop: true,
     mouseDrag: false,
-    autoplay: true,
-    autoplayTimeout: 7000,
+    // autoplay: true,
+    // autoplayTimeout: 7000,
     smartSpeed: 2000
   });
 

@@ -4974,12 +4974,11 @@ ul.list {
   .main-slider__block {
     height: 690px;
     background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover; }
+    background-repeat: no-repeat; }
     .main-slider__block--1 {
-      background-image: url("../img/main-slider-img-1.png"); }
+      background-image: url("../img/main-slider-img-1.jpg"); }
     .main-slider__block--2 {
-      background-image: url("../img/main-slider-img-2.png"); }
+      background-image: url("../img/main-slider-img-2.jpg"); }
   .main-slider .owl-dots {
     position: absolute;
     z-index: 15;
@@ -5503,7 +5502,9 @@ ul.list {
   .four-blocks__block img {
     width: 50px; }
   .main-slider__block {
-    height: 575px; }
+    height: 575px;
+    background-position: 50% center;
+    background-size: cover; }
   .btn--slide1 {
     margin-left: 18px;
     margin-top: 278px; }
@@ -5608,15 +5609,14 @@ ul.list {
       margin: 0 auto; }
   .main-slider__block {
     height: 515px;
-    background-size: auto 515px;
-    background-position: 36%; }
+    background-position: 36% center; }
   .btn--slide1, .btn--slide2 {
     height: 38px;
     line-height: 38px;
     min-width: 234px;
     font-size: 0.6875rem;
     margin-left: 45px;
-    margin-top: 270px; }
+    margin-top: 250px; }
   .btn--slide2 {
     margin-left: 30px;
     margin-top: 283px;
@@ -5663,7 +5663,7 @@ ul.list {
     padding-top: 55px;
     padding-bottom: 45px; }
   .header {
-    height: 125px; }
+    height: 130px; }
     .header__nav {
       height: 35px;
       position: absolute;
@@ -5676,10 +5676,11 @@ ul.list {
         display: none; }
       .header__nav-bottom {
         background: #c04631;
-        height: 55px;
-        padding-top: 5px; }
+        height: 60px; }
         .header__nav-bottom-phone {
-          display: block; }
+          display: block;
+          background: #ee560e;
+          padding: 5px 0; }
       .header__nav-top {
         display: none; }
     .header__btn {
@@ -5723,13 +5724,9 @@ ul.list {
   .main-slider .owl-dots {
     margin-top: -5px; }
   .main-slider__block {
-    height: 492px;
-    background-size: cover;
-    background-position: top center; }
-    .main-slider__block--1 {
-      background-image: url("../img/main-slider-img-1--480.png"); }
+    height: 315px; }
     .main-slider__block--2 {
-      background-image: url("../img/main-slider-img-2--480.png"); }
+      background-size: auto 374px; }
   .btn--slide1, .btn--slide2 {
     position: absolute;
     margin-top: 0;
@@ -5755,8 +5752,7 @@ ul.list {
 
 @media only screen and (max-width: 500px) {
   .main-slider__block {
-    height: 314px;
-    background-position: left top; } }
+    background-position: 28% center; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 479px) {
@@ -5818,13 +5814,6 @@ ul.list {
     padding-left: 0; }
   .four-blocks__block {
     font-size: 0.75rem; }
-  .main-slider__block {
-    background-size: cover;
-    background-position: top center; }
-    .main-slider__block--1 {
-      background-image: url("../img/main-slider-img-1--320.png"); }
-    .main-slider__block--2 {
-      background-image: url("../img/main-slider-img-2--320.png"); }
   .special__block-content {
     padding: 0 15px 0 15px; }
     .special__block-content-row--1 {

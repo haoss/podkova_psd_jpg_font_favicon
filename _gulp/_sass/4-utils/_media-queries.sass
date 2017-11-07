@@ -54,6 +54,8 @@
   .main-slider
     &__block
       height: 575px
+      background-position: 50% center
+      background-size: cover
   .btn
     &--slide1
       margin-left: 18px
@@ -165,8 +167,9 @@
   .main-slider
     &__block
       height: 515px
-      background-size: auto 515px
-      background-position: 36%
+      // background-size: auto 515px
+      background-position: 36% center
+
   .btn
     &--slide1, &--slide2
       height: 38px
@@ -174,7 +177,7 @@
       min-width: 234px
       font-size: rem(11)
       margin-left: 45px
-      margin-top: 270px
+      margin-top: 250px
     &--slide2
       margin-left: 30px
       margin-top: 283px
@@ -227,7 +230,7 @@
       padding-top: 55px
       padding-bottom: 45px
   .header
-    height: 125px
+    height: 130px
     &__nav
       height: 35px
       position: absolute
@@ -240,13 +243,14 @@
         display: none
       &-bottom
         background: #c04631
-        height: 55px
-        padding-top: 5px
+        height: 60px
+        // padding-top: 5px
         &-phone
           display: block
+          background: $color-orange
+          padding: 5px 0
       &-top
         display: none
-
     &__btn
       right: 50%
       transform: translateX(50%)
@@ -293,13 +297,9 @@
     .owl-dots
       margin-top: -5px
     &__block
-      height: 492px
-      background-size: cover
-      background-position: top center
-      &--1
-        background-image: url('../img/main-slider-img-1--480.png')
+      height: 315px
       &--2
-        background-image: url('../img/main-slider-img-2--480.png')
+        background-size: auto 374px
   .btn
     &--slide1, &--slide2
       position: absolute
@@ -328,8 +328,7 @@
 @media only screen and (max-width : 500px)
   .main-slider
     &__block
-      height: 314px
-      background-position: left top
+      background-position: 28% center
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -403,12 +402,12 @@
       font-size: rem(12)
   .main-slider
     &__block
-      background-size: cover
-      background-position: top center
-      &--1
-        background-image: url('../img/main-slider-img-1--320.png')
-      &--2
-        background-image: url('../img/main-slider-img-2--320.png')
+      // background-size: cover
+      // background-position: top center
+      // &--1
+      //   background-image: url('../img/main-slider-img-1--320.png')
+      // &--2
+      //   background-image: url('../img/main-slider-img-2--320.png')
   .special
     &__block
       &-content
