@@ -143,7 +143,8 @@ $(document).on('ready', function(){
     loop: true,
     mouseDrag: false,
     autoplay: true,
-    autoplayTimeout: 5000
+    autoplayTimeout: 7000,
+    smartSpeed: 2000
   });
 
   $('.special__carousel').owlCarousel({

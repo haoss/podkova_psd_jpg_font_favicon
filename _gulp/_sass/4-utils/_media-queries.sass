@@ -16,8 +16,12 @@
   .header
     &__nav
       width: 500px
-      &-top > div + div
-        margin-left: 15px
+      &-top
+        &>div
+          &+div
+            margin-left: 15px
+          &>strong
+            font-size: rem(13)
     &__quote
       margin-left: 235px
   .navigation ul li
@@ -223,7 +227,7 @@
       padding-top: 55px
       padding-bottom: 45px
   .header
-    height: 105px
+    height: 125px
     &__nav
       height: 35px
       position: absolute
@@ -236,9 +240,13 @@
         display: none
       &-bottom
         background: #c04631
-        height: 35px
+        height: 55px
+        padding-top: 5px
+        &-phone
+          display: block
       &-top
         display: none
+
     &__btn
       right: 50%
       transform: translateX(50%)
